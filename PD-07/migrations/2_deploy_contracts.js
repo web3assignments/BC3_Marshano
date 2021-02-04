@@ -1,6 +1,6 @@
 const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
-var Debug1 = artifacts.require("Debug1");
+var Debug1 = artifacts.require("TestContract");
 
 module.exports = async function(deployer) {
     const Debug1Contract = await deployProxy(Debug1, [42], { deployer });
