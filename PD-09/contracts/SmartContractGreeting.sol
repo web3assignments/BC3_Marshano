@@ -1,8 +1,10 @@
 pragma solidity ^0.6.0;
 import "@openzeppelin/upgrades-core/contracts/Initializable.sol";
 
-/// @title Greetings
-/// @author Marshano Nathie
+/// @title Greeting Solidity Program
+/// @author Marshano D. Nathie
+/// @notice Returns a simple greeting
+/// @dev Functions are named after their uses
 contract SmartContractGreeting is Initializable {
 
     // At first, an empty "address"-type variable of the name "creator". Will be set in the constructor.
@@ -28,7 +30,7 @@ contract SmartContractGreeting is Initializable {
     greeting = _greeting;
  }
     
-    //Return greeting
+    /// @return string memory
     function greet() onlyBy(owner) public returns (string memory) {
         return greeting;
     }
